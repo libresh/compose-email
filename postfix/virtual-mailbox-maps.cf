@@ -1,0 +1,7 @@
+user = vimbadmin 
+password = ##DB_PASS##
+hosts = db
+dbname = vimbadmin
+table = mailbox
+select_field = maildir
+where_field = username

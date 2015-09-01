@@ -1,0 +1,68 @@
+memcached:
+  image: memcached
+syslog:
+  image: indiehosters/syslog
+  volumes:
+    - ./tmp/syslogdev:/dev
+    - ./log:/var/log 
+db:
+  image: mysql
+  volumes:
+    - ./tmp/syslogdev/log:/dev/log
+    - ./data/mysql/runtime:/var/lib/mysql
+    - ./data/mysql/dump:/dump
+  env_file:
+    - env
+  environment:
+    MYSQL_DATABASE: vimbadmin
+    MYSQL_USER: vimbadmin
+postfix:
+  image: indiehosters/postfix
+  hostname: mail.indie.host
+  links:
+    - db
+  volumes_from:
+    - dovecot 
+  volumes: 
+    - ./data/postfix/data:/data
+    - ./data/postfix/mail:/var/mail 
+    - ./opendkim:/etc/opendkim
+    - ./TLS:/ssl 
+    - ./tmp/syslogdev/log:/dev/log
+  ports:
+    - "25:25"
+    - "587:587"
+dovecot:
+  image: indiehosters/dovecot
+  links:
+    - db
+  volumes:
+    - ./data/dovecot/mail:/mail
+    - ./TLS:/ssl
+    - ./tmp/syslogdev/log:/dev/log
+  ports:
+    - "993:993"
+vimbadmin:
+  image: indiehosters/vimbadmin
+  hostname: mail.indie.host
+  links:
+    - db
+    - memcached
+    - postfix
+  volumes_from:
+    - dovecot 
+  volumes:
+    - ./salts:/salts
+  env_file:
+    - env
+web:
+  image: nginx
+  hostname: mail.indie.host
+  links:
+    - vimbadmin
+  volumes_from:
+    - vimbadmin
+  volumes:
+    - ./vimbadmin.conf:/etc/nginx/conf.d/vimbadmin.conf:ro
+    - ./nginx.conf:/etc/nginx/nginx.conf:ro
+

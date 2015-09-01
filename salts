@@ -1,0 +1,3 @@
+resources.auth.oss.rememberme.salt = ""
+defaults.mailbox.password_salt     = ""
+
