@@ -51,6 +51,8 @@ You can help us by:
 
 ## TODO
  - one backup command (mysql dump)
+ - documentation for autoconfig in thunderbird
+ - documentation for TLS for the web (reverse proxy FTW!)
  - separate processes in postfix (one process/container! damn!)
  - postfix/dovecot - try to sync install instructions with mailinabox
  - documentation/[scripts](https://github.com/IndiePaaS/IndiePaaS/blob/master/utils/add_email_support.sh) for opendkim
