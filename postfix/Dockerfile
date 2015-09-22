@@ -20,6 +20,7 @@ COPY virtual-mailbox-domains.cf /etc/postfix/virtual-mailbox-domains.cf
 COPY virtual-mailbox-maps.cf /etc/postfix/virtual-mailbox-maps.cf
 COPY virtual-alias-maps.cf /etc/postfix/virtual-alias-maps.cf
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY add_domain.sh /add_domain.sh
 
 RUN chmod u+x /install.sh \
  && /opt/editconf.py /etc/postfix/main.cf \

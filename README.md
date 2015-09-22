@@ -39,6 +39,10 @@ Everything should be up and running.
 
 To backup, just run the `BACKUP` in your folder and you should be good!
 
+## OpenDKIM
+
+Run the `add_domain.sh` script inside the postix container, and configure your DNS, you should be fine!
+
 ## Contributing
 
 If you have any issue (something not working, mail marked as spam, missing doc), please do report an issue here! Thanks
@@ -58,7 +62,6 @@ You can help us by:
  - documentation for TLS for the web (reverse proxy FTW!)
  - separate processes in postfix (one process/container! damn!)
  - postfix/dovecot - try to sync install instructions with mailinabox
- - documentation/[scripts](https://github.com/IndiePaaS/IndiePaaS/blob/master/utils/add_email_support.sh) for opendkim
 
 Heavily inspired by [mail-in-a-box](https://mailinabox.email/)! Thanks to the amazing work they produced. It is the best up to date `how to` for email hosting out there :)
 
