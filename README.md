@@ -35,6 +35,10 @@ Check go to the web interface, get the salts, and put them in the `salts` file.
 
 Everything should be up and running.
 
+## Backup
+
+To backup, just run the `BACKUP` in your folder and you should be good!
+
 ## Contributing
 
 If you have any issue (something not working, mail marked as spam, missing doc), please do report an issue here! Thanks
@@ -50,7 +54,6 @@ You can help us by:
  - sending us cake :) We loove cake!
 
 ## TODO
- - one backup command (mysql dump)
  - documentation for autoconfig in thunderbird
  - documentation for TLS for the web (reverse proxy FTW!)
  - separate processes in postfix (one process/container! damn!)
