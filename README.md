@@ -43,6 +43,10 @@ To backup, just run the `BACKUP` in your folder and you should be good!
 
 Run the `add_domain.sh` script inside the postix container, and configure your DNS, you should be fine!
 
+## Add a mailbox
+
+You can find a script [here](https://github.com/IndiePaaS/IndiePaaS/blob/master/utils/add_mailbox.sh)
+
 ## Contributing
 
 If you have any issue (something not working, mail marked as spam, missing doc), please do report an issue here! Thanks
