@@ -3,14 +3,17 @@ Email application for IndieHosters network
 
 ## Features
 
- - opendkim
- - opendmarc
- - smtp/imap (no pop)
- - admin interface for people managing their email account (based on [vimbadmin](http://vimbadmin.net/))
- - autoconfig on thunderbird
- - autoconfig for iOS devices
- - not marked as spam on major provider (gmail, hotmail)
- - already used in production
+The components installed are:
+
+ - SMTP (postfix), IMAP (dovecot)
+ - greylisting (postgrey)
+ - DKIM (OpenDKIM), DMARC
+
+It also includes:
+
+ - A control panel (based on [vimbadmin](http://vimbadmin.net/)) for adding/removing mail users, aliases, etc.
+ - A multi admin system.
+ - Autoconfig for iOS devices and thunderbird.
 
 ## Prerequistes
 
