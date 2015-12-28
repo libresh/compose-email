@@ -55,6 +55,8 @@ vimbadmin:
     - ./salts:/salts
   env_file:
     - env
+  environment:
+    APPLICATION_ENV: production
 web:
   image: nginx
   hostname: mail.indie.host
