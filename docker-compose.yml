@@ -67,4 +67,6 @@ web:
   volumes:
     - ./vimbadmin.conf:/etc/nginx/conf.d/vimbadmin.conf:ro
     - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  environment:
+    - HOST
 
