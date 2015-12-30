@@ -7,7 +7,7 @@ db:
     - ./data/mysql/runtime:/var/lib/mysql
     - ./data/mysql/dump:/dump
   env_file:
-    - env
+    - ./env
   environment:
     MYSQL_DATABASE: vimbadmin
     MYSQL_USER: vimbadmin
@@ -49,7 +49,7 @@ vimbadmin:
   volumes:
     - ./salts:/salts
   env_file:
-    - env
+    - ./env
   environment:
     APPLICATION_ENV: production
 web:
