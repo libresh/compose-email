@@ -63,3 +63,4 @@ web:
     - ./nginx.conf:/etc/nginx/nginx.conf:ro
   environment:
     - HOST
+    - AUTOCONFIG_HOST="$HOST"
