@@ -47,7 +47,6 @@ indiehosters/email | mail-in-a-box/mailinabox | status
 
 Modify the following files:
  - env
- - docker-compose.yml (hostname)
 
 Add the following files:
  - TLS/ssl_certificate.pem
@@ -56,7 +55,7 @@ Add the following files:
 ## Run
 
 ```
-docker-compose up
+HOST=example.org docker-compose up
 ```
 
 Check go to the web interface, get the salts, and put them in the `salts` file.
