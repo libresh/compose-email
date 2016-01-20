@@ -24,8 +24,6 @@ postfix:
     - db
     - spamassassin
   volumes: 
-    - ./data/postfix/data:/data
-    - ./data/postfix/mail:/var/mail 
     - ./opendkim:/etc/opendkim
     - ./TLS:/ssl 
     - /dev/log:/dev/log
