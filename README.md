@@ -46,7 +46,7 @@ indiehosters/email | mail-in-a-box/mailinabox | status
  - docker-compose
 
 Modify the following files:
- - env
+ - env.template (and rename to env)
 
 Add the following files:
  - TLS/ssl_certificate.pem
