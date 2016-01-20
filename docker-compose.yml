@@ -11,16 +11,19 @@ db:
   environment:
     MYSQL_DATABASE: vimbadmin
     MYSQL_USER: vimbadmin
+spamassassin:
+    image: indiehosters/spamassassin
+    links:
+      - dovecot
+    volumes:
+      - /dev/log:/dev/log
 postfix:
   image: indiehosters/postfix
   hostname: "$HOST"
   links:
     - db
-  volumes_from:
-    - dovecot 
+    - spamassassin
   volumes: 
-    - ./data/postfix/data:/data
-    - ./data/postfix/mail:/var/mail 
     - ./opendkim:/etc/opendkim
     - ./TLS:/ssl 
     - /dev/log:/dev/log
