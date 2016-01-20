@@ -12,7 +12,7 @@ indiehosters/email | mail-in-a-box/mailinabox | status
 [ ] Exchange ActiveSync (z-push) | [x] Exchange ActiveSync (z-push) | [planned](https://github.com/indiehosters/email/issues/3)
 [ ] Webmail (Roundcube) | [x] Webmail (Roundcube) | [planned](https://github.com/indiehosters/email/issues/4)
 [ ] static website hosting (nginx) | [x] static website hosting (nginx) | part of other package
-[ ] Spam filtering (spamassassin) | [x] Spam filtering (spamassassin) | [planned](https://github.com/indiehosters/email/issues/2)
+[x] Spam filtering (spamassassin) | [x] Spam filtering (spamassassin) | :white_check_mark:
 [x] greylisting (postgrey) | [x] greylisting (postgrey) | :white_check_mark: 
 [ ] Backups (duplicity) | [x] Backups (duplicity) | part of [backup](https://github.com/IndiePaaS/IndiePaaS/blob/master/unit-files/b-u%40.service) package
 [ ] firewall (ufw) | [x] firewall (ufw) | planned, as part of [firewall](https://github.com/IndiePaaS/IndiePaaS/issues/108) package
