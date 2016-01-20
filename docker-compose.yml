@@ -23,6 +23,7 @@ postfix:
   links:
     - db
     - spamassassin
+    - dovecot
   volumes: 
     - ./opendkim:/etc/opendkim
     - ./TLS:/ssl 
