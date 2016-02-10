@@ -58,7 +58,7 @@ Add the following files:
 HOST=example.org docker-compose up
 ```
 
-Check go to the web interface, get the salts, and put them in the `salts` file.
+Check go to the web interface (http://conainer_ip:80), get the salts, and put them in the `salts` file.
 
 Everything should be up and running.
 
