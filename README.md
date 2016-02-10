@@ -89,7 +89,6 @@ You can help us by:
  - sending us cake :) We loove cake!
 
 ## TODO
- - documentation for autoconfig in thunderbird
  - documentation for TLS for the web (reverse proxy FTW!)
  - separate processes in postfix (one process/container! damn!)
  - postfix/dovecot - try to sync install instructions with mailinabox
