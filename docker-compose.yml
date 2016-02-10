@@ -52,6 +52,7 @@ vimbadmin:
     - dovecot 
   volumes:
     - ./salts:/salts
+    - ./indie.signed.mobileconfig:/var/www/html/public/indie.signed.mobileconfig
   env_file:
     - ./env
   environment:

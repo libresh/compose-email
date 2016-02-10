@@ -1,0 +1,14 @@
+#!/bin/bash
+
+source ./env
+
+sed -i "s/PRIMARY_HOSTNAME/${HOSTNAME}/g"  ./indie.mobileconfig
+sed -i "s/CLOUD_HOSTNAME/${CLOUD_HOSTNAME}/g"  ./indie.mobileconfig
+sed -i "s/UUID1/$(cat /proc/sys/kernel/random/uuid)/g"  ./indie.mobileconfig
+sed -i "s/UUID2/$(cat /proc/sys/kernel/random/uuid)/g"  ./indie.mobileconfig
+sed -i "s/UUID3/$(cat /proc/sys/kernel/random/uuid)/g"  ./indie.mobileconfig
+sed -i "s/UUID4/$(cat /proc/sys/kernel/random/uuid)/g"  ./indie.mobileconfig
+
+cat TLS/cert.pem TLS/chain.pem > TLS/ssl_certificate.pem
+
+openssl smime  -sign  -signer TLS/cert.pem -inkey TLS/ssl_private_key.pem -certfile TLS/chain.pem  -nodetach -outform der -in indie.mobileconfig -out indie.signed.mobileconfig

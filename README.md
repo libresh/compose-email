@@ -49,12 +49,15 @@ Modify the following files:
  - env.template (and rename to env)
 
 Add the following files:
+ - TLS/chain.pem
+ - TLS/cert.pem
  - TLS/ssl_certificate.pem
  - TLS/ssl_private_key.pem
 
 ## Run
 
 ```
+./install
 HOST=example.org docker-compose up
 ```
 
@@ -94,4 +97,3 @@ You can help us by:
  - postfix/dovecot - try to sync install instructions with mailinabox
 
 Heavily inspired by [mail-in-a-box](https://mailinabox.email/)! Thanks to the amazing work they produced. It is the best up to date `how to` for email hosting out there :)
-
