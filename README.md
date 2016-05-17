@@ -7,6 +7,7 @@ indiehosters/email | mail-in-a-box/mailinabox | status
 ------------------ | ------------- | -----------
 [x] SMTP (postfix) | [x] SMTP (postfix) | :white_check_mark: 
 [x] IMAP (dovecot) | [x] IMAP (dovecot) | :white_check_mark: 
+[x] POP  (dovecot) | [x] POP  (dovecot) | :white_check_mark: 
 [ ] search (dovecot-lucene) | [x] search (dovecot-lucene) | [planned](https://github.com/indiehosters/email/issues/5)
 [ ] CardDAV/CalDAV (ownCloud) | [x] CardDAV/CalDAV (ownCloud) | part of [ownCloud](https://github.com/indiehosters/ownCloud) package
 [ ] Exchange ActiveSync (z-push) | [x] Exchange ActiveSync (z-push) | [planned](https://github.com/indiehosters/email/issues/3)

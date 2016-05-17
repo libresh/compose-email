@@ -41,6 +41,7 @@ dovecot:
     - /dev/log:/dev/log
   ports:
     - "993:993"
+    - "995:995"
 vimbadmin:
   image: indiehosters/vimbadmin
   hostname: "$HOST"
