@@ -58,7 +58,7 @@ vimbadmin:
     - ./env
   environment:
     APPLICATION_ENV: production
-    CLOUD_HOSTNAME
+    CLOUD_HOST
 web:
   image: nginx
   hostname: "$HOST"
