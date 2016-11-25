@@ -68,7 +68,7 @@ Everything should be up and running.
 
 ## Backup
 
-To backup, just run the `BACKUP` in your folder and you should be good!
+To backup, just run the `./scripts/pre-backup` in your folder and you should be good!
 
 ## OpenDKIM
 
