@@ -19,7 +19,7 @@ spamassassin:
       - /dev/log:/dev/log
 postfix:
   image: indiehosters/postfix
-  hostname: "$HOST"
+  hostname: "$VIRTUAL_HOST"
   links:
     - db
     - spamassassin
@@ -44,7 +44,7 @@ dovecot:
     - "995:995"
 vimbadmin:
   image: indiehosters/vimbadmin
-  hostname: "$HOST"
+  hostname: "$VIRTUAL_HOST"
   links:
     - db
     - memcached
@@ -61,7 +61,7 @@ vimbadmin:
     CLOUD_HOST:
 web:
   image: nginx
-  hostname: "$HOST"
+  hostname: "$VIRTUAL_HOST"
   links:
     - vimbadmin
   volumes_from:
@@ -69,5 +69,5 @@ web:
   volumes:
     - ./nginx.conf:/etc/nginx/nginx.conf:ro
   environment:
-    - HOST
-    - AUTOCONFIG_HOST="$HOST"
+    - VIRTUAL_HOST
+    - AUTOCONFIG_HOST="$VIRTUAL_HOST"

@@ -59,7 +59,7 @@ Add the following files:
 
 ```
 ./install
-HOST=example.org docker-compose up
+VIRTUAL_HOST=example.org docker-compose up
 ```
 
 Check go to the web interface (http://conainer_ip:80), get the salts, and put them in the `salts` file.
