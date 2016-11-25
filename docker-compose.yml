@@ -28,6 +28,7 @@ postfix:
     - ./opendkim:/etc/opendkim
     - ./TLS:/ssl 
     - /dev/log:/dev/log
+    - ./tmp:/var/spool/postfix
   ports:
     - "25:25"
     - "587:587"
