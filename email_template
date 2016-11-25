@@ -1,0 +1,21 @@
+Dear {$mailbox->getName()},
+
+{if $welcome}
+Welcome to your new email account.
+{/if}
+
+Your email address is: {$mailbox->getUsername()}
+
+{if $welcome}
+Your password is: {$password}
+It is recommended to reset it.
+(Login in your cloud and go to your profile)
+{/if}
+
+Follow this link to find details about how to configure your email and cloud:
+https://forum.indie.host/t/how-to-configure-your-email/54
+
+For assistance, please use the following:
+  Forum: https://forum.indie.host/
+  Chat: https://chat.indie.host/channel/support
+  {$settings.email.name} <{$settings.email.address}>

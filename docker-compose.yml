@@ -55,6 +55,7 @@ vimbadmin:
   volumes:
     - ./salts:/salts
     - ./indie.signed.mobileconfig:/var/www/html/public/indie.signed.mobileconfig
+    - ./email_template:/var/www/html/application/views/mailbox/email/settings.phtml
   env_file:
     - ./env
   environment:
