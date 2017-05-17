@@ -23,11 +23,11 @@ services:
     networks:
     - back
   spamassassin:
-      image: indiehosters/spamassassin
-      links:
-        - dovecot
-      volumes:
-        - /dev/log:/dev/log
+    image: indiehosters/spamassassin
+    links:
+      - dovecot
+    volumes:
+      - /dev/log:/dev/log
     networks:
     - back
   postfix:
